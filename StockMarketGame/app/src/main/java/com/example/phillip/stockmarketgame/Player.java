@@ -1,8 +1,13 @@
 package com.example.phillip.stockmarketgame;
 
+import java.util.ArrayList;
+
 /**
- * Created by Phillip on 4/24/2017.
+ * @author Phillip McLaurin
+ * @version beta
  */
 
 public class Player {
+    String playerID;
+    ArrayList<Stock> portfolio = new ArrayList<Stock>();
 }
