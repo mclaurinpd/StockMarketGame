@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/cash"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scrollframe"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/exit"
+        android:text="Cash: $0"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/netWorth"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:text="Net Worth : $0"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:layout_above="@+id/cash"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/exit"
+        android:layout_toEndOf="@+id/exit" />
+
+    <ImageButton
+        android:id="@+id/exit"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/whitebackground"
+        android:maxHeight="40dp"
+        android:maxWidth="40dp"
+        android:minHeight="0dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/backarrow" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:text="my stocks"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:layout_above="@+id/netWorth"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/exit"
+        android:layout_toEndOf="@+id/exit" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:id="@+id/scrollframe"
+        android:layout_below="@+id/exit">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/stockTemplate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="stockname : growth% : price" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

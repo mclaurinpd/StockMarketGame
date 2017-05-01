@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/cash"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/profileButton"
+        android:layout_toRightOf="@+id/profileButton"
+        android:text="cash : $..."
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scrollframe"
+        android:layout_toEndOf="@+id/profileButton"
+        android:layout_toLeftOf="@+id/leaderboardButton"
+        android:layout_toRightOf="@+id/profileButton"
+        android:text="stocks"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/leaderboardButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="0dp"
+        android:background="@drawable/whitebackground"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:maxHeight="40dp"
+        android:maxWidth="40dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/stocklist"
+        app:srcCompat="@drawable/stocklist" />
+
+    <ImageButton
+        android:id="@+id/profileButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="0dp"
+        android:background="@drawable/whitebackground"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:maxHeight="40dp"
+        android:maxWidth="40dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/profile"
+        app:srcCompat="@drawable/profile" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/leaderboardButton"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:id="@+id/scrollframe">
+
+        <LinearLayout
+            android:id="@+id/stocksLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/stockTemplate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="stockname : growth% : price" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
